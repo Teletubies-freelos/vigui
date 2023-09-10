@@ -39,7 +39,7 @@ export const NavBar = ({ logo, pages }: NavBarProps)=>{
         <BurgerIcon />
       </IconButton>
       <Drawer
-        sx={{width: '10rem'}}
+        sx={{width: 'calc(100vw -10rem)'}}
         anchor='right'
         open={!!anchorElNav}
       >
