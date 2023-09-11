@@ -1,5 +1,5 @@
 .hero {
-  height: calc(100vh - 8rem);
+  height: calc(100vh - 5rem);
   display: grid;
   grid-template-rows: repeat(2, 1fr);
   gap: 1rem;
