@@ -22,6 +22,11 @@ export const defaultTheme = createTheme({
     },
     body2:{
       color: '#252525'
+    },
+    h3:{
+      color: '#0E58EA',
+      fontWeight: 'bold',
+      fontSize: '2em'
     }
   }
 })

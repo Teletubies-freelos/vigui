@@ -44,7 +44,7 @@ export const NavBar = ({ logo, pages, sxMenuButton, ctaElement }: NavBarProps)=>
       <Drawer
         PaperProps={{sx:{
             background: ({palette})=> palette.background.default,
-            width: '12rem'
+            width: 'min(20rem, 70vw)'
           }
         }}
         anchor='right'
