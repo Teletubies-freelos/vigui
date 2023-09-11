@@ -1,6 +1,6 @@
-import { requirement } from "@/types";
+import { Requirement } from "@/types";
 
-export const REQUIREMENTS: requirement[] = [
+export const REQUIREMENTS: Requirement[] = [
   {
     icon: "../../public/icons/requirements/instalacion.svg",
     title: "Instalacion",

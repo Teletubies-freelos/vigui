@@ -30,7 +30,7 @@ export type Plan = {
   benefits: string[];
 };
 
-export type requirement = {
+export type Requirement = {
   icon: string;
   title: string;
   description: string;
