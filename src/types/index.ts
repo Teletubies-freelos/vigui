@@ -3,7 +3,7 @@ export interface Page{
   href: string
 }
 
-export type Company = {
+export interface Company {
   name: string;
   phone: number[];
   email: string[];
@@ -11,40 +11,40 @@ export type Company = {
   location: string[];
   schedule: Schedule;
   Characteristic: string[];
-};
+}
 
-export type Social = {
+export interface Social {
   facebook: string;
   instagram: string;
   twitter: string;
-};
+}
 
-export type Schedule = {
-  "Lunes - Viernes": string[];
-  Sabado: string[];
-};
+export interface Schedule {
+  weekDays: string[];
+  weekEnds: string[];
+}
 
-export type Benefit = {
+export interface Benefit {
   icon: string;
   description: string;
-};
+}
 
-export type Plan = {
+export interface Plan {
   price: string;
   plan: string;
   benefits: string[];
-};
+}
 
-export type Requirement = {
+export interface Requirement {
   icon: string;
   title: string;
   description: string;
-};
+}
 
-export type Testimonial = {
+export interface Testimonial {
   image: string;
   name: string;
   location: string;
   description: string;
-};
+}
 
