@@ -1,6 +1,9 @@
+import React from 'react'
 import type { Preview } from "@storybook/react";
+import { ThemeRegistry } from '../src/providers/theme';
 
 const preview: Preview = {
+  decorators:[(Story)=><ThemeRegistry><Story /></ThemeRegistry>],
   parameters: {
     actions: { argTypesRegex: "^on[A-Z].*" },
     controls: {
