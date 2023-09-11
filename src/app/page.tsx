@@ -1,11 +1,10 @@
-import { Nav } from '@/organisms/Nav'
-import HeroVigui from '@/components/Hero'
+import { Nav } from "@/organisms/Nav";
+
 
 export default function Home() {
   return (
-    <>
-      <Nav />
-      <HeroVigui />
-    </>
+    <Nav />
+    
+
   )
 }
