@@ -11,8 +11,8 @@ export const VIGUI: Company = {
   },
   location: ["Carrera 48 #48-92 Santuario Ant."],
   schedule: {
-    "Lunes - Viernes": ["9:00 a.m. - 12:00 a.m. ", "2:00 p.m. - 6:00 a.m"],
-    Sabado: ["9:00 a.m. - 1:00 p.m."],
+    weekDays: ["9:00 a.m. - 12:00 a.m. ", "2:00 p.m. - 6:00 a.m"],
+    weekEnds: ["9:00 a.m. - 1:00 p.m."],
   },
   Characteristic: [
     "Ofrecemos el 100% de megas",
