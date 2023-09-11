@@ -1,0 +1,28 @@
+import { Meta, Source } from '@storybook/blocks';
+
+import Card from './Card.example.tsx'
+import { Container } from './Container.tsx'
+
+import code from '!raw-loader!./Card.example.tsx';
+
+<Meta
+  title="Organisms/Card"
+  component={Card}
+/>
+
+
+
+Ejemplo de Card
+
+<div style={{display: 'grid', gap: '2rem'}}>
+  <Container>
+    <Card />
+  </Container>
+
+
+   <Container>
+      <Card variant='secondary'/>
+   </Container>
+</div>
+
+<Source code={code} dark/>
