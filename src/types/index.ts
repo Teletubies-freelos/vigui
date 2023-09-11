@@ -1,3 +1,8 @@
+export interface Page{
+  label: string; 
+  href: string
+}
+
 export interface Company {
   name: string;
   phone: number[];
@@ -15,8 +20,8 @@ export interface Social {
 }
 
 export interface Schedule {
-  "Lunes - Viernes": string[];
-  Sabado: string[];
+  weekDays: string[];
+  weekEnds: string[];
 }
 
 export interface Benefit {
@@ -42,3 +47,4 @@ export interface Testimonial {
   location: string;
   description: string;
 }
+

@@ -3,9 +3,10 @@ import { Box, Drawer, IconButton, Link, MenuItem, SxProps, Toolbar, Typography }
 import { Burger as BurgerIcon} from "../icons/burger";
 import { MouseEvent, useState } from "react";
 import { Close as CloseIcon } from "../icons/close";
+import { Page } from "@/types";
 interface NavBarProps{
   logo?:JSX.Element;
-  pages: {label: string; href: string}[];
+  pages: Page[];
   sxMenuButton? : SxProps;
   ctaElement?: JSX.Element;
 }
