@@ -1,9 +1,8 @@
 import { NavBar } from "@/components/navbar"
 import { Page } from "@/types"
 import { Box } from "@mui/material"
-import Image from "next/image"
-import logSvg from '../../../public/logo.svg'
 import { pagesSingleton } from "@/modules"
+import { Logo } from "@/components/icons/logo"
 
 const fakePages = Array.from({length: 3}).map((_, index)=>({
   href: '/fakeRef' + index,
@@ -25,7 +24,7 @@ export const Nav = async ()=>{
 
   return (<Box component='nav' width='100vw'>
     <NavBar 
-      logo={<Image src={logSvg} alt='vigui logo'/>}
+      logo={<Logo />}
       pages={pages}
     />
   </Box>)
