@@ -1,3 +1,8 @@
+export interface Page{
+  label: string; 
+  href: string
+}
+
 export type Company = {
   name: string;
   phone: number[];
@@ -42,3 +47,4 @@ export type Testimonial = {
   location: string;
   description: string;
 };
+
