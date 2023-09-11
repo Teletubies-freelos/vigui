@@ -1,7 +1,6 @@
 import { NavBar } from "@/components/navbar"
-import Image from "next/image"
-import logo from '../../assets/logo.svg'
 import { Box } from "@mui/material"
+import { Logo } from "@/components/icons/logo"
 
 const fakePages = Array.from({length: 3}).map((_, index)=>({
   href: '/fakeRef' + index,
@@ -11,7 +10,7 @@ const fakePages = Array.from({length: 3}).map((_, index)=>({
 export const NavBarExample = ()=>{
   return (
     <Box sx={{width: '80vw'}}>
-      <NavBar logo={<Image src={logo} alt={'vigui logo'}/>} pages={fakePages}/>
+      <NavBar logo={<Logo />} pages={fakePages}/>
     </Box>
   )
 }
