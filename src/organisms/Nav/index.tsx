@@ -3,6 +3,7 @@ import { Page } from "@/types"
 import { Box } from "@mui/material"
 import Image from "next/image"
 import logSvg from '../../../public/logo.svg'
+import { pagesSingleton } from "@/modules"
 
 const fakePages = Array.from({length: 3}).map((_, index)=>({
   href: '/fakeRef' + index,
@@ -12,9 +13,7 @@ const fakePages = Array.from({length: 3}).map((_, index)=>({
 
 const fetchPages = async (): Promise<Page[]> =>{
   try{
-    const data = await fetch('pages')
-  
-    return await data.json()
+    return await pagesSingleton.getPages()
     
   }catch(_error){
     return fakePages

@@ -22,11 +22,11 @@ export default function ResponsiveCarousel<T>({
   itemRender,
   groupSize = 3,
 }: ResponsiveCarouselProps<T>) {
-  const HeroItems = useMemo(() => data?.map(itemRender) ?? [], [data]);
+  const HeroItems = useMemo(() => data?.map(itemRender) ?? [], [data, itemRender]);
 
   const HeroItemsGroup = useMemo(
     () => groupBy(HeroItems ?? [], groupSize),
-    [HeroItems],
+    [HeroItems, groupSize],
   );
 
   if(HeroItems.length === groupSize)
