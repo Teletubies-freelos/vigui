@@ -1,4 +1,4 @@
-import { PageSupabse } from "@/services/pages";
+import { DataSupabse } from "@/services/pages";
 import { createClient } from "@supabase/supabase-js";
 
 const fakeUrl = 'https://pepeito.hola'
@@ -11,5 +11,5 @@ const fakeToken = Math.random()
 
 export const supabaseClient = createClient(process.env.NEXT_SUPABASE_URL ?? fakeUrl, process.env.NEXT_SUPABASE_TOKEN ?? fakeToken)
 
-export const pagesSingleton = new PageSupabse(supabaseClient)
+export const dataSingleton = new DataSupabse(supabaseClient)
 

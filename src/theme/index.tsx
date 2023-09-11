@@ -19,6 +19,9 @@ export const defaultTheme = createTheme({
   typography:{
     body1: {
       color: 'white'
+    },
+    body2:{
+      color: '#252525'
     }
   }
 })
