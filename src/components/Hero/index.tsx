@@ -1,7 +1,5 @@
 import React, { PropsWithChildren } from 'react'
 import style from './style.module.css'
-import { Typography } from '@mui/material'
-import { Button } from '../buttons'
 
 interface Img {
   src: string
@@ -47,22 +45,7 @@ const HeroVigui = () => {
         alt: 'Persona sentado en un sillon sujetadno una laptop',
       }}
     >
-      <Typography
-        sx={{
-          fontSize: { xs: '1.4rem', md: '2rem', lg: '2.5rem' },
-          color: { xs: 'black', sm: 'white' },
-        }}
-      >
-        Disfruta de la mejor velocidad con nuestro plan de
-      </Typography>
-      <Typography
-        sx={{ fontSize: { xs: '2rem', md: '3rem', lg: '3.5rem' } }}
-        fontWeight='bold'
-        color='#00B3FF'
-      >
-        20 Mb a 250 Mb
-      </Typography>
-      <Button>¡Contrata ahora!</Button>
+    
     </Hero>
   )
 }

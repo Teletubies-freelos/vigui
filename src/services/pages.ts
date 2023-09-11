@@ -1,16 +1,23 @@
-import { Page } from "@/types";
+import { Benefit, Page } from "@/types";
 import { SupabaseClient } from '@supabase/supabase-js'
 
-interface PagesFacade{
-  getPages(): Promise<Page[]>
+interface DataFacade{
+  getPages(): Promise<Page[]>;
+  getBenefits(): Promise<Benefit[]>;
 }
 
 
-export class PageSupabse implements PagesFacade{
+export class DataSupabse implements DataFacade{
   constructor(private client: SupabaseClient){}
   async getPages() {
     const { data } = await this.client.from('clients').select('*').throwOnError()
 
     return data as Page[]
+  }
+
+  async getBenefits(){
+    const { data } = await this.client.from('benefits').select('*').throwOnError()
+
+    return data as Benefit[]
   }
 }

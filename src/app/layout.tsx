@@ -1,4 +1,5 @@
 import { ThemeRegistry } from "@/providers/theme";
+import { Box } from "@mui/material";
 import type { Metadata } from "next";
 import Head from "next/head";
 import Script from "next/script";
@@ -16,9 +17,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <Script src="./vendors/woopra.js" />
-      <body>
+      <Box component={'body'} sx={{background: 'white'}}>
         <ThemeRegistry>{children}</ThemeRegistry>
-      </body>
+      </Box>
     </html>
   );
 }

@@ -1,4 +1,4 @@
-import { Button as ButtonMUI } from "@mui/material";
+import { Button as ButtonMUI, SxProps } from "@mui/material";
 import { MouseEventHandler, PropsWithChildren } from "react";
 
 interface ButtonProps extends PropsWithChildren {
@@ -7,15 +7,25 @@ interface ButtonProps extends PropsWithChildren {
   onClick?: MouseEventHandler<HTMLButtonElement>
   isAnchor?: boolean;
   href?: string;
+  sx?: SxProps
 }
 
-export const Button = ({ color = 'primary', variant = 'rounded', children, onClick, isAnchor, href }: ButtonProps) => {
+export const Button = ({ 
+  color = 'primary', 
+  variant = 'rounded', 
+  children, 
+  onClick, 
+  isAnchor, 
+  href,
+  sx
+}: ButtonProps) => {
   if (isAnchor)
     return (
       <ButtonMUI
         component={'a'}
         sx={{
-          borderRadius: variant === 'rounded' ? '1rem' : 0
+          borderRadius: variant === 'rounded' ? '1rem' : 0,
+          ...sx
         }}
         variant="contained"
         color={color}

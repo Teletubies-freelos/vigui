@@ -1,6 +1,13 @@
-export interface Page{
+export interface Page {
   label: string; 
   href: string
+}
+
+export interface Benefit {
+  id?: string | number;
+  description: string;
+  icon?: string;
+  iconName?: string;
 }
 
 export interface Company {
@@ -22,11 +29,6 @@ export interface Social {
 export interface Schedule {
   weekDays: string[];
   weekEnds: string[];
-}
-
-export interface Benefit {
-  icon: string;
-  description: string;
 }
 
 export interface Plan {

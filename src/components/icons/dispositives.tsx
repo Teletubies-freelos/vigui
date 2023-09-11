@@ -1,6 +1,7 @@
 import { SvgIcon } from "@mui/material";
+import { sxStyles } from "./styles";
 
-export const Dispositive = () => <SvgIcon>
+export const Dispositive = () => <SvgIcon sx={sxStyles}>
   <svg width="92" height="92" viewBox="0 0 92 92" fill="none" xmlns="http://www.w3.org/2000/svg">
     <g clipPath="url(#clip0_390_2844)">
       <path d="M41.2418 65.276V61.8336H80.6374V18.683H12.2305V32.4065H9.53516V18.5257C9.53516 15.8699 10.3382 15.0555 12.9689 15.0555H75.2007C76.9914 15.0555 78.7821 15.0555 80.5636 15.0555C82.345 15.0555 83.4435 16.055 83.4435 17.9705C83.4435 32.8445 83.4435 47.7123 83.4435 62.5739C83.4435 63.8047 83.0373 64.8874 81.8558 65.1927C80.8405 65.4518 72.7269 65.4333 72.4315 65.4333H41.7402C41.5699 65.3953 41.4031 65.3427 41.2418 65.276Z" fill="#0E58EA" />
