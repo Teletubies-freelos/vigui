@@ -1,6 +1,6 @@
 import { Button, Stack, Typography } from "@mui/material";
 
-export interface itemProp {
+export interface ItemProp {
   item: {
     description: string;
     price: string;
@@ -9,7 +9,7 @@ export interface itemProp {
   };
 }
 
-export default function ContentCard({ item }: itemProp) {
+export default function ContentCard({ item }: ItemProp) {
   return (
     <Stack>
       <Typography

@@ -31,21 +31,21 @@ export default function CustomCarousel() {
   ];
 
   const itemRender = (item: any) => (
-    <ThemeRegistry>
-      <Card
-        sxCard={{
-          width: "16rem",
-          margin: "0 auto",
-        }}
-        header={<HeaderCard item={item} />}
-        content={<ContentCard item={item} />}
-      />
-    </ThemeRegistry>
+    <Card
+      sxCard={{
+        width: "16rem",
+        margin: "0 auto",
+      }}
+      header={<HeaderCard item={item} />}
+      content={<ContentCard item={item} />}
+    />
   );
 
   return (
-    <Box width="100%">
-      <ResponsiveCarousel data={data} itemRender={itemRender} groupSize={2} />
-    </Box>
+    <ThemeRegistry>
+      <Box width="100%">
+        <ResponsiveCarousel data={data} itemRender={itemRender} groupSize={2} />
+      </Box>
+    </ThemeRegistry>
   );
 }
