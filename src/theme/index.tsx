@@ -1,27 +1,23 @@
 import { createTheme } from '@mui/material'
+import './types'
 
 export const defaultTheme = createTheme({
-  palette:{
-    primary:{
-      main: "#FF4C00"
+  palette: {
+    primary: {
+      main: '#FF4C00',
+      light: '#FF7A00',
+      lighter: '#FFB21E',
+      dark: '#e04c0d',
     },
-    secondary:{
+    secondary: {
       main: '#0039A4',
-      "900": '#0E58EA'
+      light: '#175EEB',
+      lighter: '#00B3FF',
+      dark: '#06348c',
     },
-    background:{
-      default: '#0039A4'
-    },
-    info:{
-      main: '#0E58EA'
+    common: {
+      white: '#fefefe',
+      black: '#252525',
     },
   },
-  typography:{
-    body1: {
-      color: 'white'
-    },
-    body2:{
-      color: '#252525'
-    }
-  }
 })

@@ -44,9 +44,7 @@ const HeroVigui = () => {
         src: './person.png',
         alt: 'Persona sentado en un sillon sujetadno una laptop',
       }}
-    >
-    
-    </Hero>
+    ></Hero>
   )
 }
 
