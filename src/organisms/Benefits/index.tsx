@@ -1,4 +1,4 @@
-import { Box, Container, Typography } from "@mui/material"
+import { Box, Typography } from "@mui/material"
 import { dataSingleton } from "@/modules"
 import { benefits } from "./data"
 
@@ -14,7 +14,7 @@ export const Benefits = async ()=>{
   const benefits = await fetchBenefits()
 
   return(
-    <Container sx={{paddinBlock: 8}}>
+    <Box sx={{paddinBlock: 8}}>
       <Typography variant='h3' align="center" sx={{paddingBlockEnd: 8}}>Beneficios</Typography>
       <Box component='section' sx={{
         display: 'flex',
@@ -41,6 +41,6 @@ export const Benefits = async ()=>{
           ))
         }
       </Box>
-    </Container>
+    </Box>
   )
 }
