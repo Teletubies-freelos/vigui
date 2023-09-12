@@ -2,6 +2,7 @@
 import { Box, Stack } from "@mui/material";
 import { useMemo } from "react";
 import CarouselHero from "../../layouts/carousel";
+import { groupBy } from "@/utils";
 
 interface ResponsiveCarouselProps<T> {
   data: T[];
