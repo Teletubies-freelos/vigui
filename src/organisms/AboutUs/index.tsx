@@ -15,8 +15,19 @@ export async function AboutUS(){
   const aboutUsData = await fetchAboutUs()
 
   return (
-    <Box>
-      <Typography variant="h3" align="center">Quienes somos</Typography>
+    <Box 
+      component="section" 
+      minHeight='100vh' 
+      display={'grid'} 
+      sx={{gridTemplateRows: '.5fr 1fr 1fr'}}
+    >
+      <Typography 
+        variant="h3" 
+        align="center" 
+        sx={{alignSelf: 'center', justifySelf: 'center'}}
+      >
+        Quienes somos
+      </Typography>
       <AboutUsContainer 
         title={<Typography>{aboutUsData.first.title}</Typography>}  
       >
