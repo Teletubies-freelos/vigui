@@ -2,6 +2,7 @@
 import { Box, Stack } from "@mui/material";
 import { useMemo } from "react";
 import CarouselHero from "../../layouts/carousel";
+import { groupBy } from "@/utils";
 
 interface ResponsiveCarouselProps<T> {
   data: T[];
@@ -9,14 +10,10 @@ interface ResponsiveCarouselProps<T> {
   groupSize?: number;
 }
 
-function groupBy<T>(items: T[], groupSize: number) {
-  const HeroItemsGroup: T[][] = [];
-  for (let i = 0; i < items.length; i += groupSize)
-    HeroItemsGroup.push(items.slice(i, i + groupSize));
-
-  return HeroItemsGroup;
-}
-
+/**
+ * 
+ * For more information about this pattern look for render props pattern
+ */
 export default function ResponsiveCarousel<T>({
   data,
   itemRender,
@@ -28,7 +25,7 @@ export default function ResponsiveCarousel<T>({
   );
 
   const HeroItemsGroup = useMemo(
-    () => groupBy(HeroItems ?? [], groupSize),
+    () => groupBy<JSX.Element>(HeroItems ?? [], groupSize),
     [HeroItems, groupSize]
   );
 
