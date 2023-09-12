@@ -20,15 +20,22 @@ interface AboutUsProps extends PropsWithChildren{
 
 export const AboutUsContainer = ({ variant = 'top', title, sx, children}:AboutUsProps)=>{
   return(
-    <Box sx={{
+    <Box className={'about-container'} sx={{
       display: 'flex',
       background:bgVariants[variant],
-      borderRadius: {xs: borderVariants[variant], md: '1rem'},
+      borderRadius: {xs: borderVariants[variant], sm: '1rem'},
       padding: 2,
-      flexDirection: {xs: variant === 'top'? 'row-reverse': 'unset', md: 'unset'},
+      flexDirection: {xs: variant === 'top'? 'row-reverse': 'unset', sm: 'unset'},
+      transition: 'all 0.4s ease-out',
       ...sx
     }}>
-      <ScaleIcon sx={{width: '4rem', transform: variant==='top'? 'unset':'rotate(180deg)', margin: 'auto', fontSize: '6em'}}/>
+      <ScaleIcon 
+        sx={{
+          width: {xs:'4rem', sm: '6rem'}, 
+          transform: variant==='top'? 'unset':'rotate(180deg)',
+          margin: 'auto',
+          fontSize: '6em'
+        }}/>
       <Box>
         {title}
         {children}
