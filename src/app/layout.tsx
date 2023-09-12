@@ -1,7 +1,6 @@
 import { ThemeRegistry } from "@/providers/theme";
 import { Box } from "@mui/material";
 import type { Metadata } from "next";
-import Head from "next/head";
 import Script from "next/script";
 
 export const metadata: Metadata = {
