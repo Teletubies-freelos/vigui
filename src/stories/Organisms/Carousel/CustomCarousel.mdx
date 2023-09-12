@@ -1,0 +1,15 @@
+import { Meta, Source } from "@storybook/blocks";
+
+import CustomCarousel from "./CustomCarousel.example.tsx";
+
+import code from "!raw-loader!./CustomCarousel.example.tsx";
+
+<Meta title="Organisms/CustomCarousel" component={CustomCarousel} />
+
+Ejemplo de CustomCarousel
+
+<div style={{ display: "grid", placeItems: "center" }}>
+  <CustomCarousel />
+</div>
+
+<Source code={code} dark />
