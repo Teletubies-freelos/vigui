@@ -1,7 +1,7 @@
-'use client';
+"use client";
 import { Stack } from "@mui/material";
 import { useMemo } from "react";
-import CarouselHero from '../../layouts/carousel';
+import CarouselHero from "../../layouts/carousel";
 
 interface ResponsiveCarouselProps<T> {
   data: T[];
@@ -22,15 +22,17 @@ export default function ResponsiveCarousel<T>({
   itemRender,
   groupSize = 3,
 }: ResponsiveCarouselProps<T>) {
-  const HeroItems = useMemo(() => data?.map(itemRender) ?? [], [data, itemRender]);
+  const HeroItems = useMemo(
+    () => data?.map(itemRender) ?? [],
+    [data, itemRender]
+  );
 
   const HeroItemsGroup = useMemo(
     () => groupBy(HeroItems ?? [], groupSize),
-    [HeroItems, groupSize],
+    [HeroItems, groupSize]
   );
 
-  if(HeroItems.length === groupSize)
-    return {HeroItemsGroup}
+  if (HeroItems.length === groupSize) return { HeroItemsGroup };
 
   return (
     <>
@@ -38,7 +40,12 @@ export default function ResponsiveCarousel<T>({
         sx={{ display: { md: "block", xs: "none" }, paddingX: "1rem" }}
       >
         {HeroItemsGroup.map((items, index) => (
-          <Stack gap={2} direction="row" key={items.length + index} justifyContent="center">
+          <Stack
+            gap={2}
+            direction="row"
+            key={items.length + index}
+            justifyContent="center"
+          >
             {items}
           </Stack>
         ))}
