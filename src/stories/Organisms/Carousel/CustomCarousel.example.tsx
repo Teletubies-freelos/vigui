@@ -28,6 +28,13 @@ export default function CustomCarousel() {
       description:
         "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Placeat aspernatur odio error provident saepe id asperiores eius doloremque labore deleniti?",
     },
+    {
+      price: "$ 500",
+      velocity: "60",
+      moreTitle: "De 20Mb a 500Mb",
+      description:
+        "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Placeat aspernatur odio error provident saepe id asperiores eius doloremque labore deleniti?",
+    },
   ];
 
   const itemRender = (item: any) => (
@@ -44,7 +51,7 @@ export default function CustomCarousel() {
   return (
     <ThemeRegistry>
       <Box width="100%">
-        <ResponsiveCarousel data={data} itemRender={itemRender} groupSize={2} />
+        <ResponsiveCarousel data={data} itemRender={itemRender} groupSize={3} />
       </Box>
     </ThemeRegistry>
   );
