@@ -1,7 +1,7 @@
 import { Stack, Typography } from "@mui/material";
-import { itemProp } from "./ContentCard";
+import { ItemProp } from "./ContentCard";
 
-export default function HeaderCard({ item }: itemProp) {
+export default function HeaderCard({ item }: ItemProp) {
   return (
     <Stack height="8rem" alignItems="center" justifyContent="center" gap="1rem">
       <Typography
