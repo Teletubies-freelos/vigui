@@ -1,9 +1,12 @@
 import { Meta, Source } from '@storybook/blocks';
 
 import Card from './Card.example.tsx'
+import { CustomCard } from './CustomCard.example.tsx'
 import { Container } from './Container.tsx'
+import { ThemeRegistry } from '../../..//providers/theme';
 
 import code from '!raw-loader!./Card.example.tsx';
+import customCode from '!raw-loader!./CustomCard.example.tsx';
 
 <Meta
   title="Organisms/Card"
@@ -11,18 +14,26 @@ import code from '!raw-loader!./Card.example.tsx';
 />
 
 
+<ThemeRegistry>
+  Ejemplo de Card
 
-Ejemplo de Card
+  <div style={{display: 'grid', gap: '2rem'}}>
+    <Container>
+      <Card />
+    </Container>
 
-<div style={{display: 'grid', gap: '2rem'}}>
+
+    <Container>
+        <Card variant='secondary'/>
+    </Container>
+  </div>
+
+  <Source code={code} dark/>
+
   <Container>
-    <Card />
+      <CustomCard />
   </Container>
 
 
-   <Container>
-      <Card variant='secondary'/>
-   </Container>
-</div>
-
-<Source code={code} dark/>
+  <Source code={customCode} dark/>
+</ThemeRegistry>

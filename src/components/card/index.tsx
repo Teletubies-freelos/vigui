@@ -1,4 +1,4 @@
-import { Box, CardContent, Card as CardMUI, SxProps} from '@mui/material'
+import { Box, CardContent, Card as CardMUI, SxProps, Theme} from '@mui/material'
 import { ReactNode } from 'react';
 
 export interface CardProps {
@@ -9,7 +9,8 @@ export interface CardProps {
   classNameCard?: string;
   classNameHeader?: string;
   classNameContent?: string;
-  sxContentProps?: SxProps
+  sxContentProps?: SxProps;
+  sxHeader?: SxProps<Theme>;
 }
 
 export const Card = ({ 
@@ -20,7 +21,8 @@ export const Card = ({
   classNameCard,
   classNameContent,
   classNameHeader,
-  sxContentProps
+  sxContentProps,
+  sxHeader
 }: CardProps)=>{
 
   return(
@@ -41,7 +43,7 @@ export const Card = ({
         ...sxCard
         }}
     >
-      <CardContent sx={{
+      <CardContent className={classNameContent} sx={{
         display: 'grid',
         gridArea: '2 / 2 / 5 / 5',
         boxShadow: 1,
@@ -50,7 +52,7 @@ export const Card = ({
         ...(header? { gridTemplateRows: '2fr 2fr 1fr'}:{}),
         ...sxContentProps
       }}>
-        <Box className={classNameContent} sx={{
+        <Box sx={{
           gridRowStart: 2
         }}>
           {content}
@@ -58,9 +60,10 @@ export const Card = ({
       </CardContent>
       {
         header && 
-          <Box  className={classNameHeader} sx={{
+          <Box className={classNameHeader} sx={{
             gridArea: '1 / 1 / 3/ 4',
-            backgroundColor: ({palette}) => variant === 'primary' ? palette.primary.main : palette.secondary.main
+            backgroundColor: `${variant}.main`,
+            ...(sxHeader as any)
           }}>
             {header}
           </Box>
