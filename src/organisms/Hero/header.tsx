@@ -13,12 +13,14 @@ export const Header = ()=>(
     Disfruta de la mejor velocidad con nuestro plan de
     </Typography>
     <Typography
-      sx={{ fontSize: { xs: '2rem', md: '3rem', lg: '3.5rem' } }}
+      sx={{ fontSize: { xs: '2.6rem', lg: '3.5rem' } }}
       fontWeight='bold'
       color='#00B3FF'
     >
       20 Mb a 250 Mb
     </Typography>
-    <Button variant="roundless" >¡Contrata ahora!</Button>
+    <Button sx={{ borderRadius: '.25rem', paddingBlock: 2.5, paddingInline: 3.5, marginBlockStart:{md: 8, lg: '15vh'}}} >
+      <Typography sx={{fontSize: {md:'2em', xs: '1.5em'}, fontWeight: 'bolder'}}>¡Contrata ahora!</Typography>
+    </Button>
   </>
 )
