@@ -1,7 +1,6 @@
 import { ThemeRegistry } from "@/providers/theme";
 import { Box } from "@mui/material";
 import type { Metadata } from "next";
-import Head from "next/head";
 import Script from "next/script";
 
 export const metadata: Metadata = {
@@ -16,7 +15,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <Script src="./vendors/woopra.js" />
+      {process.env.NODE_ENV !== 'development' && <Script src="./vendors/woopra.js" />}
       <Box component={'body'} sx={{background: 'white'}}>
         <ThemeRegistry>{children}</ThemeRegistry>
       </Box>

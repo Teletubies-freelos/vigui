@@ -38,7 +38,8 @@ export const Button = ({
   return (
     <ButtonMUI
       sx={{
-        borderRadius: variant === 'rounded' ? '1rem' : 0
+        borderRadius: variant === 'rounded' ? '1rem' : 0,
+        ...sx
       }}
       variant="contained"
       color={color}
