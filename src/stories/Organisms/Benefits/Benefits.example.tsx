@@ -1,4 +1,4 @@
-import { benefits } from "@/organisms/Benefits/data"
+import { benefits } from "@/features/Benefits/data"
 import { Box, Typography } from "@mui/material"
 
 export const Benefits = ()=>{

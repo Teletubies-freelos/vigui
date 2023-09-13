@@ -50,3 +50,6 @@ export interface Testimonial {
   description: string;
 }
 
+export interface Horary {
+  horary: string[];
+}

@@ -1,4 +1,4 @@
-import { Benefit, Page } from "@/types";
+import { Benefit, Horary, Page } from "@/types";
 import { SupabaseClient } from '@supabase/supabase-js'
 
 interface Info{
@@ -48,5 +48,13 @@ export class DataSupabse implements DataFacade{
       .throwOnError()
 
     return data as Benefit[]
+  }
+  async getHorary(){
+    const { data } = await this.client
+      .from('horary')
+      .select('*')
+      .throwOnError()
+
+    return data as Horary[]
   }
 }

@@ -1,0 +1,15 @@
+import { Meta, Source } from "@storybook/blocks";
+
+import { Horary } from "./Horary.example.tsx";
+
+import code from "!raw-loader!./Horary.example.tsx";
+
+<Meta title="Organisms/Horary" component={Horary} />
+
+Ejemplo de Horary
+
+<div style={{ display: "grid", placeItems: "center" }}>
+  <Horary />
+</div>
+
+<Source code={code} dark />
