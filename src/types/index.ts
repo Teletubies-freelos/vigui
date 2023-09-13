@@ -35,6 +35,7 @@ export interface Plan {
   price: string;
   plan: string;
   benefits: string[];
+  meta: string;
 }
 
 export interface Requirement {

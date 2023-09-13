@@ -1,4 +1,4 @@
-import { Benefit, Page } from "@/types";
+import { Benefit, Page, Plan } from "@/types";
 import { SupabaseClient } from '@supabase/supabase-js'
 
 interface Info{
@@ -12,12 +12,28 @@ interface AboutUs{
 interface DataFacade{
   getPages(): Promise<Page[]>;
   getBenefits(): Promise<Benefit[]>;
-  getAboutUs():Promise<AboutUs>
+  getAboutUs():Promise<AboutUs>;
+  getInternetPlans(): Promise<Plan[]>;
 }
 
 
 export class DataSupabse implements DataFacade{
   constructor(private client: SupabaseClient){}
+
+  async getInternetPlans(): Promise<Plan[]> {
+    const { data } = await this.client
+    .from('internet_plans')
+    .select("*")
+    .throwOnError();
+
+    if(!data)
+      throw new Error('no data')
+
+    const [ aboutUs ] = data
+
+    return aboutUs 
+  }
+
   async getAboutUs(){
     const { data } = await this.client
       .from('about_us')
@@ -32,6 +48,7 @@ export class DataSupabse implements DataFacade{
 
     return aboutUs as AboutUs
   }
+
   async getPages() {
     const { data } = await this.client
       .from('clients')
