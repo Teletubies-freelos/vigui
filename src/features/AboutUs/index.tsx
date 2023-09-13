@@ -32,7 +32,7 @@ const sxAnimationProps: SxProps = {
       '& + .about-container': {
         transform: 'scale(0.9) translateX(2vw) translateY(-1.6rem) ',
         transformOrigin: 'top left',
-      }
+      },
     },
   },
 };
