@@ -14,7 +14,6 @@ interface NavBarProps{
 
 
 export const NavBar = ({ logo, pages, sxMenuButton, ctaElement }: NavBarProps) => {
-  const { palette} = useTheme()
   const [anchorElNav, setAnchorElNav] = useState<null | HTMLElement>(null);
 
   const handleOpenNavMenu = (event: MouseEvent<HTMLElement>)=>{
@@ -26,7 +25,7 @@ export const NavBar = ({ logo, pages, sxMenuButton, ctaElement }: NavBarProps) =
   };
 
 
-  return (<Toolbar sx={{ background: palette.secondary.main }}>
+  return (<Toolbar sx={{ backgroundColor: 'secondary.main'}}>
     {
       logo && <Box>
         {logo}
@@ -45,7 +44,7 @@ export const NavBar = ({ logo, pages, sxMenuButton, ctaElement }: NavBarProps) =
       </IconButton>
       <Drawer
         PaperProps={{sx:{
-            background: palette.secondary.dark,
+            backgroundColor: 'secondary.dark',
             width: 'min(20rem, 70vw)'
           }
         }}
@@ -54,7 +53,7 @@ export const NavBar = ({ logo, pages, sxMenuButton, ctaElement }: NavBarProps) =
       >
       <Box sx={{
         width: 1,
-        background:palette.secondary.light,
+        backgroundColor:'secondary.light',
         display: 'flex',
         justifyContent: 'flex-end'
       }}>
