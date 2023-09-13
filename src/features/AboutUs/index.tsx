@@ -73,7 +73,7 @@ export async function AboutUS() {
           <Typography
             sx={{
               textAlign: { xs: 'right', md: 'unset' },
-              marginTop: '1rem'
+              marginTop: '1rem',
             }}
           >
             {aboutUsData.second.description}
