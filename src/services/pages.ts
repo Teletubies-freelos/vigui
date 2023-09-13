@@ -1,4 +1,4 @@
-import { Benefit, Horary, Page } from "@/types";
+import { Benefit, Horary, KnowUsData, Page } from "@/types";
 import { SupabaseClient } from '@supabase/supabase-js'
 
 interface Info{
@@ -56,5 +56,13 @@ export class DataSupabse implements DataFacade{
       .throwOnError()
 
     return data as Horary[]
+  }
+  async getKnowUs(){
+    const { data } = await this.client
+    .from('knowus')
+    .select('*')
+    .throwOnError()
+
+    return data as KnowUsData[]
   }
 }

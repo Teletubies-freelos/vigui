@@ -1,0 +1,15 @@
+import { Meta, Source } from "@storybook/blocks";
+
+import { KnowUs } from "./KnowUs.example.tsx";
+
+import code from "!raw-loader!./KnowUs.example.tsx";
+
+<Meta title="Organisms/KnowUs" component={KnowUs} />
+
+Ejemplo de Horary
+
+<div style={{ display: "grid", placeItems: "center" }}>
+  <KnowUs />
+</div>
+
+<Source code={code} dark />

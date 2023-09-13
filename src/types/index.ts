@@ -53,3 +53,12 @@ export interface Testimonial {
 export interface Horary {
   horary: string[];
 }
+
+export type LinkProps = {
+  text: string;
+  url: string;
+}
+
+export interface KnowUs {
+  links: Array<LinkProps>;
+}
