@@ -15,13 +15,17 @@ const TvPlans = () => {
       bgcolor={palette.primary.light}
     >
       <div>
-        <Typography fontSize={{ xs: 30, lg: 40 }} fontWeight={'bold'}>
+        <Typography
+          fontSize={{ xs: 30, lg: 40 }}
+          fontWeight={'bold'}
+          color='common.white'
+        >
           Televisión
         </Typography>
         <div>Card</div>
       </div>
       <div>
-        <Typography fontSize={{ xs: 20, md: 25, lg: 30 }}>
+        <Typography fontSize={{ xs: 20, md: 25, lg: 30 }} color='common.white'>
           Conoce nuestro canal de youtube
         </Typography>
         <Container className={style.ytContainer}>

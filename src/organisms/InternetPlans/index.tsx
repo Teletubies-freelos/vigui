@@ -38,7 +38,7 @@ const CardHeader = ({ item }: any) => (
   <Box display={'grid'} sx={{ height: '100%', placeItems: 'center' }} p={2}>
     <Typography
       variant='h3'
-      sx={{ color: 'primary.main' }}
+      sx={{ color: 'primary.light' }}
       className={classesInnerHeader.first}
     >
       {item.price}
@@ -46,12 +46,14 @@ const CardHeader = ({ item }: any) => (
     <Typography
       className={classesInnerHeader.second}
       sx={{ fontSize: '1.2rem', fontWeight: '600' }}
+      color='common.white'
     >
       {item.velocity}Mb
     </Typography>
     <Typography
       className={classesInnerHeader.third}
       sx={{ fontSize: '.7rem', fontWeight: '300' }}
+      color='common.white'
     >
       {item.moreTitle}
     </Typography>
@@ -187,6 +189,7 @@ export default function InternetPlans() {
         <Typography
           variant='h4'
           sx={{ alignSelf: 'start', fontSize: '1.6rem' }}
+          color='common.white'
         >
           Internet hogar
         </Typography>

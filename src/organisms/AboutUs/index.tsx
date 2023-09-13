@@ -44,7 +44,7 @@ export async function AboutUS() {
   return (
     <Box component='section'>
       <Typography padding={4} variant='h3' align='center'>
-        Quienes somos
+        ¿Quienes somos?
       </Typography>
       <Box
         padding={{ sm: 5 }}
