@@ -29,7 +29,6 @@ const sxAnimationProps: SxProps = {
       zIndex: 2,
       transform: 'scale(1.1) translateY(4rem)',
       transformOrigin: 'bottom right',
-      filter: 'blur(0)',
       '& + .about-container': {
         transform: 'scale(0.9) translateX(2vw) translateY(-1.6rem) ',
         transformOrigin: 'top left',
@@ -74,10 +73,7 @@ export async function AboutUS() {
           <Typography
             sx={{
               textAlign: { xs: 'right', md: 'unset' },
-              marginTop: '1rem',
-              sm: {
-                filter: 'blur(.15rem)',
-              }
+              marginTop: '1rem'
             }}
           >
             {aboutUsData.second.description}
