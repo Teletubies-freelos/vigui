@@ -19,6 +19,7 @@ async function fetchAboutUs() {
 }
 
 const sxCards: SxProps = {
+  widt: '90%',
   gridTemplateRows: { xs: '1fr 1fr', sm: '2rem 7rem' },
   gridTemplateColumns: { sm: '1.3fr 5rem 1fr' },
 };

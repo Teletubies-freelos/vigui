@@ -1,7 +1,8 @@
-import { Nav } from '@/organisms/Nav'
-import { Benefits } from '@/organisms/Benefits'
-import { Hero } from '@/organisms/Hero'
-import { AboutUS } from '@/organisms/AboutUs'
+import { Nav } from '@/organisms/Nav';
+import { Benefits } from '@/organisms/Benefits';
+import { Hero } from '@/organisms/Hero';
+import { AboutUS } from '@/organisms/AboutUs';
+import InternetPlans from '@/organisms/InternetPlans';
 
 export default function Home() {
   return (
@@ -10,6 +11,7 @@ export default function Home() {
       <Hero />
       <AboutUS />
       <Benefits />
+      <InternetPlans />
     </>
-  )
+  );
 }

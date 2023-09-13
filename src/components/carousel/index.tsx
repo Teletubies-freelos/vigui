@@ -1,8 +1,8 @@
-"use client";
-import { Box, Stack } from "@mui/material";
-import { useMemo } from "react";
-import CarouselHero from "../../layouts/carousel";
-import { groupBy } from "@/utils";
+'use client';
+import { Box, Stack } from '@mui/material';
+import { useMemo } from 'react';
+import CarouselHero from '../../layouts/carousel';
+import { groupBy } from '@/utils';
 
 interface ResponsiveCarouselProps<T> {
   data: T[];
@@ -11,7 +11,7 @@ interface ResponsiveCarouselProps<T> {
 }
 
 /**
- * 
+ *
  * For more information about this pattern look for render props pattern
  */
 export default function ResponsiveCarousel<T>({
@@ -32,17 +32,19 @@ export default function ResponsiveCarousel<T>({
   return (
     <>
       {HeroItems.length === groupSize ? (
-        <Box display={{ md: "flex", xs: "none" }}>{HeroItemsGroup}</Box>
+        <Box display={{ md: 'flex', xs: 'none', gap: '3rem' }} height='35rem'>
+          {HeroItemsGroup}
+        </Box>
       ) : (
         <CarouselHero
-          sx={{ display: { md: "block", xs: "none" }, paddingX: "1rem" }}
+          sx={{ display: { md: 'block', xs: 'none' }, paddingX: '1rem' }}
         >
           {HeroItemsGroup.map((items, index) => (
             <Stack
               gap={2}
-              direction="row"
+              direction='row'
               key={items.length + index}
-              justifyContent="center"
+              justifyContent='center'
             >
               {items}
             </Stack>
@@ -50,7 +52,7 @@ export default function ResponsiveCarousel<T>({
         </CarouselHero>
       )}
 
-      <CarouselHero sx={{ display: { md: "none", xs: "block" } }}>
+      <CarouselHero sx={{ display: { md: 'none', xs: 'block' } }}>
         {HeroItems}
       </CarouselHero>
     </>
