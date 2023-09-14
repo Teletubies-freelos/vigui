@@ -7,7 +7,7 @@ export const Header = ()=>(
       sx={{
         textAlign:{xs: 'center', md: 'right'},
         fontSize: { xs: '1.4rem', md: '2rem', lg: '2.5rem' },
-        color: { xs: 'black', md: 'white' },
+        color: { xs: 'common.black', md: 'common.white' },
       }}
     >
     Disfruta de la mejor velocidad con nuestro plan de
@@ -15,7 +15,7 @@ export const Header = ()=>(
     <Typography
       sx={{ fontSize: { xs: '2.6rem', lg: '3.5rem' } }}
       fontWeight='bold'
-      color='#00B3FF'
+      color='secondary.lighter'
     >
       20 Mb a 250 Mb
     </Typography>

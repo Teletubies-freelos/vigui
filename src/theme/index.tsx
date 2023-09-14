@@ -4,30 +4,39 @@ export const defaultTheme = createTheme({
   palette: {
     primary: {
       main: '#FF4C00',
+      light: '#FF7A00',
+      lighter: '#FFB21E',
+      dark: '#e04c0d',
     },
     secondary: {
       main: '#0039A4',
-      '900': '#0E58EA',
-      contrastText: '#FF912C',
+      light: '#175EEB',
+      lighter: '#00B3FF',
+      dark: '#06348c',
     },
-    background: {
-      default: '#0039A4',
-    },
-    info: {
-      main: '#0E58EA',
+    common: {
+      white: '#fefefe',
+      black: '#252525',
     },
   },
   typography: {
-    body1: {
-      color: 'white',
-    },
     body2: {
       color: '#252525',
     },
     h3: {
-      color: '#0E58EA',
       fontWeight: 'bold',
       fontSize: '2em',
     },
   },
 });
+
+
+declare module '@mui/material/styles' {
+  interface PaletteColor {
+    lighter?: string
+  }
+
+  interface SimplePaletteColorOptions {
+    lighter?: string
+  }
+}

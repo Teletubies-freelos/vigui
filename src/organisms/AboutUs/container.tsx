@@ -27,6 +27,7 @@ export const AboutUsContainer = ({
   return (
     <Box
       className={'about-container'}
+      color='common.white'
       sx={{
         display: 'flex',
         background: bgVariants[variant],

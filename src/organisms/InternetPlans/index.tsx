@@ -35,6 +35,7 @@ export default async function InternetPlans() {
       <Typography
         variant='h4'
         sx={{ alignSelf: 'start', fontSize: '1.6rem' }}
+        color='common.white'
       >
         Internet hogar
       </Typography>

@@ -1,5 +1,6 @@
 'use client'
-import { Box, Drawer, IconButton, Link, MenuItem, SxProps, Toolbar, Typography } from "@mui/material"
+
+import { Box, Drawer, IconButton, Link, MenuItem, SxProps, Toolbar, Typography, useTheme } from "@mui/material"
 import { Burger as BurgerIcon} from "../icons/burger";
 import { MouseEvent, useState } from "react";
 import { Close as CloseIcon } from "../icons/close";
@@ -12,7 +13,7 @@ interface NavBarProps{
 }
 
 
-export const NavBar = ({ logo, pages, sxMenuButton, ctaElement }: NavBarProps)=>{
+export const NavBar = ({ logo, pages, sxMenuButton, ctaElement }: NavBarProps) => {
   const [anchorElNav, setAnchorElNav] = useState<null | HTMLElement>(null);
 
   const handleOpenNavMenu = (event: MouseEvent<HTMLElement>)=>{
@@ -24,7 +25,7 @@ export const NavBar = ({ logo, pages, sxMenuButton, ctaElement }: NavBarProps)=>
   };
 
 
-  return (<Toolbar sx={{background: ({palette})=> palette.secondary.main}}>
+  return (<Toolbar sx={{ backgroundColor: 'secondary.main'}}>
     {
       logo && <Box>
         {logo}
@@ -43,7 +44,7 @@ export const NavBar = ({ logo, pages, sxMenuButton, ctaElement }: NavBarProps)=>
       </IconButton>
       <Drawer
         PaperProps={{sx:{
-            background: ({palette})=> palette.background.default,
+            backgroundColor: 'secondary.dark',
             width: 'min(20rem, 70vw)'
           }
         }}
@@ -51,8 +52,8 @@ export const NavBar = ({ logo, pages, sxMenuButton, ctaElement }: NavBarProps)=>
         open={!!anchorElNav}
       >
       <Box sx={{
-        width: 1, 
-        background: ({palette})=> palette.info.main,
+        width: 1,
+        backgroundColor:'secondary.light',
         display: 'flex',
         justifyContent: 'flex-end'
       }}>
@@ -63,7 +64,7 @@ export const NavBar = ({ logo, pages, sxMenuButton, ctaElement }: NavBarProps)=>
         {pages.map(({label, href}) => (
           <MenuItem key={label} onClick={handleCloseNavMenu}>
             <Link underline={'none'} href={href}>
-              <Typography variant="body1">
+              <Typography variant="body1" color='common.white'>
                 {label}
               </Typography>
             </Link>
@@ -81,7 +82,7 @@ export const NavBar = ({ logo, pages, sxMenuButton, ctaElement }: NavBarProps)=>
       {
         pages.map(({href, label})=> 
           <Link underline={'none'} key={label} href={href}>
-            <Typography>
+            <Typography color='common.white'>
             {label}
             </Typography>
           </Link>
