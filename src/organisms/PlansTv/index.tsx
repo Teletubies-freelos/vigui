@@ -48,7 +48,7 @@ const TvPlans = () => {
         sx={{
           width: '80%',
           margin: 'auto',
-          mt: 4,
+          mt: 3,
         }}
       >
         <Typography color='common.white' fontSize={{ xs: 15, md: 20, lg: 25 }}>
