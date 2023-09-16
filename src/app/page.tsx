@@ -7,6 +7,7 @@ import SectionContact from '@/organisms/SectionContact';
 import TvPlans from '@/organisms/PlansTv';
 import SectionTestimonials from '@/organisms/SectionTestimonials';
 import SectionTeam from '@/organisms/SectionTeam';
+import Banner from '@/organisms/Banner';
 
 export default function Home() {
   return (
@@ -18,6 +19,7 @@ export default function Home() {
       <Benefits />
       <InternetPlans />
       <TvPlans />
+      <Banner />
       <SectionTestimonials />
       <SectionContact />
     </>

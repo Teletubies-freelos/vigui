@@ -17,7 +17,7 @@ export interface Company {
   social: Social;
   location: string[];
   schedule: Schedule;
-  Characteristic: string[];
+  characteristic: string[];
 }
 
 export interface Social {
