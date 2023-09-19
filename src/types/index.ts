@@ -62,3 +62,9 @@ export type LinkProps = {
 export interface KnowUs {
   links: Array<LinkProps>;
 }
+
+export interface ContactInfo {
+  text: string;
+  url: string;
+  icon: string;
+}

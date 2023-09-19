@@ -65,4 +65,12 @@ export class DataSupabse implements DataFacade{
 
     return data as KnowUsData[]
   }
+  async getContactInfo() {
+    const { data } = await this.client
+      .from('contactinfo')
+      .select('*')
+      .throwOnError()
+
+    return data as ContactInfo[]
+  }
 }
