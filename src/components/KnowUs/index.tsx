@@ -1,9 +1,9 @@
 import { Link, List, ListItem, Typography } from '@mui/material';
 import { links } from './data';
 import { dataSingleton } from '@/modules';
-import { KnowUs } from '@/types';
+import { KnowUsLinks } from '@/types';
 
-async function fetchKnowUs() {
+async function fetchKnowUs(): Promise<KnowUsLinks['links']> {
   try {
     return await dataSingleton.getKnowUs();
   } catch (_error) {

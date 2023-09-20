@@ -59,6 +59,6 @@ export type LinkProps = {
   url: string;
 }
 
-export interface KnowUs {
+export interface KnowUsLinks {
   links: Array<LinkProps>;
 }
