@@ -1,13 +1,13 @@
-import { Nav } from '@/organisms/Nav';
-import { Benefits } from '@/organisms/Benefits';
-import { Hero } from '@/organisms/Hero';
-import { AboutUS } from '@/organisms/AboutUs';
-import InternetPlans from '@/organisms/InternetPlans';
-import SectionContact from '@/organisms/SectionContact';
-import TvPlans from '@/organisms/PlansTv';
-import SectionTestimonials from '@/organisms/SectionTestimonials';
-import SectionTeam from '@/organisms/SectionTeam';
-import Banner from '@/organisms/Banner';
+import { Nav } from '@/features/Nav';
+import { Benefits } from '@/features/Benefits';
+import { Hero } from '@/features/Hero';
+import { AboutUS } from '@/features/AboutUs';
+import InternetPlans from '@/features/InternetPlans';
+import SectionContact from '@/features/SectionContact';
+import TvPlans from '@/features/PlansTv';
+import SectionTestimonials from '@/features/SectionTestimonials';
+import SectionTeam from '@/features/SectionTeam';
+import Banner from '@/features/Banner';
 
 export default function Home() {
   return (

@@ -1,0 +1,15 @@
+import { Meta, Source } from "@storybook/blocks";
+
+import { ContactInfo } from "./ContactInfo.example.tsx";
+
+import code from "!raw-loader!./ContactInfo.example.tsx";
+
+<Meta title="Organisms/ContactInfo" component={ContactInfo} />
+
+Ejemplo de ContactInfo
+
+<div style={{ display: "grid", placeItems: "center", background: 'peru' }}>
+  <ContactInfo />
+</div>
+
+<Source code={code} dark />

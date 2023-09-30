@@ -56,3 +56,21 @@ export interface User {
   name: string;
   location: string;
 }
+export interface Horary {
+  horary: string[];
+}
+
+export type LinkProps = {
+  text: string;
+  url: string;
+}
+
+export interface KnowUs {
+  links: Array<LinkProps>;
+}
+
+export interface ContactInfo {
+  text: string;
+  url: string;
+  icon: string;
+}
