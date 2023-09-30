@@ -1,6 +1,6 @@
 'use client';
 
-import { Box, Container, Typography, useTheme } from '@mui/material';
+import { Box, Button, Container, Typography, useTheme } from '@mui/material';
 import style from './style.module.css';
 import { LiteYoutubeEmbed } from 'react-lite-yt-embed';
 
@@ -39,6 +39,30 @@ const TvPlans = () => {
           />
         </Container>
       </div>
+      <Box
+        component={'footer'}
+        className={style.footer}
+        display={'flex'}
+        flexDirection={'column'}
+        gap={2}
+        sx={{
+          width: '80%',
+          margin: 'auto',
+          mt: 3,
+        }}
+      >
+        <Typography color='common.white' fontSize={{ xs: 15, md: 20, lg: 25 }}>
+          Deseas hacer publicidad de tu negocio o evento en nuestros canales
+          comunícate con nosotros
+        </Typography>
+        <Button
+          variant='contained'
+          sx={{ maxWidth: 'max-content' }}
+          color='secondary'
+        >
+          <Typography fontSize={20}>¡Contactanos!</Typography>
+        </Button>
+      </Box>
     </Box>
   );
 };

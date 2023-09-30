@@ -1,0 +1,23 @@
+.card {
+  /* border: 1px solid red; */
+  gap: 1rem;
+  width: 100%;
+  max-width: 300px;
+}
+
+.card img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  transform: scale(1.08);
+}
+.header {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  border-radius: 0.5rem;
+  background: linear-gradient(90deg, transparent 50px, #0039a4 50px);
+}
+.body {
+  padding-left: 3rem;
+}

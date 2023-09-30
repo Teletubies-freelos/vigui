@@ -1,6 +1,6 @@
 export interface Page {
-  label: string; 
-  href: string
+  label: string;
+  href: string;
 }
 
 export interface Benefit {
@@ -17,7 +17,7 @@ export interface Company {
   social: Social;
   location: string[];
   schedule: Schedule;
-  Characteristic: string[];
+  characteristic: string[];
 }
 
 export interface Social {
@@ -48,6 +48,11 @@ export interface Testimonial {
   image: string;
   name: string;
   location: string;
-  description: string;
+  description?: string;
 }
 
+export interface User {
+  image: string;
+  name: string;
+  location: string;
+}
